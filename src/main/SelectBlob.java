@@ -35,6 +35,7 @@ public class SelectBlob {
             Iterator<Row> iter = rs.iterator();
             while (iter.hasNext()) {
                 Row row = iter.next();
+                // this is important and key
                 byte[] value = Bytes.getArray(row.getBytes("value"));
                 int len = value.length;
                 pw.println(len);
